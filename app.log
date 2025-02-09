@@ -1,0 +1,12 @@
+2025-02-09 13:03:33,985 ERROR root Erro ocorreu
+2025-02-09 13:03:33,985 CRITICAL root Erro crítico
+2025-02-09 13:03:35,540 ERROR root Erro ocorreu
+2025-02-09 13:03:35,540 CRITICAL root Erro crítico
+2025-02-09 13:06:58,901 ERROR example Erro
+2025-02-09 13:06:58,902 CRITICAL example Erro crítico
+2025-02-09 20:29:49,160 ERROR example Erro
+2025-02-09 20:29:49,161 CRITICAL example Erro crítico
+2025-02-09 20:31:12,446 ERROR example Erro
+2025-02-09 20:31:12,446 CRITICAL example Erro crítico
+2025-02-09 20:33:42,010 ERROR example Erro
+2025-02-09 20:33:42,010 CRITICAL example Erro crítico
