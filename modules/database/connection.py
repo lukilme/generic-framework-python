@@ -1,6 +1,3 @@
-
-
-
 class DatabaseConnection:
     def __new__(cls, *args, **kwargs):
         print(f"Criando uma instância de {cls.__name__}")
