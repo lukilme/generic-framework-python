@@ -58,3 +58,125 @@
 2025-02-27 23:46:36,779 CRITICAL example Erro crítico
 2025-02-28 18:57:08,623 ERROR example Erro
 2025-02-28 18:57:08,623 CRITICAL example Erro crítico
+2025-03-17 12:00:18,516 ERROR root Erro ocorreu
+2025-03-17 12:00:18,516 CRITICAL root Erro crítico
+2025-03-17 12:04:14,598 ERROR example Erro
+2025-03-17 12:04:14,598 CRITICAL example Erro crítico
+2025-03-17 12:04:15,453 ERROR example Erro
+2025-03-17 12:04:15,454 CRITICAL example Erro crítico
+2025-03-17 12:05:19,659 ERROR example Erro
+2025-03-17 12:05:19,659 CRITICAL example Erro crítico
+2025-03-17 12:06:03,847 ERROR example Erro
+2025-03-17 12:06:03,847 CRITICAL example Erro crítico
+2025-03-17 12:07:26,740 ERROR example Erro
+2025-03-17 12:07:26,741 CRITICAL example Erro crítico
+2025-03-17 12:07:29,042 ERROR example Erro
+2025-03-17 12:07:29,042 CRITICAL example Erro crítico
+2025-03-17 12:11:28,113 ERROR example Erro
+2025-03-17 12:11:28,114 CRITICAL example Erro crítico
+2025-03-17 12:14:41,241 ERROR example Erro
+2025-03-17 12:14:41,241 CRITICAL example Erro crítico
+2025-03-17 12:15:10,624 ERROR example Erro
+2025-03-17 12:15:10,624 CRITICAL example Erro crítico
+2025-03-17 12:15:57,277 ERROR example Erro
+2025-03-17 12:15:57,278 CRITICAL example Erro crítico
+2025-03-17 12:16:10,010 ERROR example Erro
+2025-03-17 12:16:10,010 CRITICAL example Erro crítico
+2025-03-17 12:16:35,512 ERROR example Erro
+2025-03-17 12:16:35,512 CRITICAL example Erro crítico
+2025-03-17 12:17:06,314 ERROR example Erro
+2025-03-17 12:17:06,314 CRITICAL example Erro crítico
+2025-03-17 12:17:06,315 ERROR root Erro ocorreu
+2025-03-17 12:17:06,315 CRITICAL root Erro crítico
+2025-03-17 12:17:12,458 ERROR example Erro
+2025-03-17 12:17:12,458 CRITICAL example Erro crítico
+2025-03-17 12:17:14,429 ERROR example Erro
+2025-03-17 12:17:14,429 CRITICAL example Erro crítico
+2025-03-17 12:17:16,724 ERROR example Erro
+2025-03-17 12:17:16,724 CRITICAL example Erro crítico
+2025-03-17 12:17:30,969 ERROR example Erro
+2025-03-17 12:17:30,969 CRITICAL example Erro crítico
+2025-03-17 12:21:07,693 ERROR example Erro
+2025-03-17 12:21:07,693 CRITICAL example Erro crítico
+2025-03-17 12:21:09,576 ERROR example Erro
+2025-03-17 12:21:09,576 CRITICAL example Erro crítico
+2025-03-17 12:35:00,179 ERROR example Erro
+2025-03-17 12:35:00,179 CRITICAL example Erro crítico
+2025-03-17 12:35:20,104 ERROR example Erro
+2025-03-17 12:35:20,104 CRITICAL example Erro crítico
+2025-03-17 12:35:32,429 ERROR example Erro
+2025-03-17 12:35:32,429 CRITICAL example Erro crítico
+2025-03-17 12:36:48,662 ERROR example Erro
+2025-03-17 12:36:48,663 CRITICAL example Erro crítico
+2025-03-17 12:36:52,489 ERROR example Erro
+2025-03-17 12:36:52,489 CRITICAL example Erro crítico
+2025-03-17 12:37:01,842 ERROR example Erro
+2025-03-17 12:37:01,842 CRITICAL example Erro crítico
+2025-03-17 12:37:12,822 ERROR example Erro
+2025-03-17 12:37:12,822 CRITICAL example Erro crítico
+2025-03-17 12:37:15,281 ERROR example Erro
+2025-03-17 12:37:15,282 CRITICAL example Erro crítico
+2025-03-17 12:38:36,858 ERROR example Erro
+2025-03-17 12:38:36,858 CRITICAL example Erro crítico
+2025-03-17 12:40:20,570 ERROR example Erro
+2025-03-17 12:40:20,570 CRITICAL example Erro crítico
+2025-03-17 12:40:25,873 ERROR example Erro
+2025-03-17 12:40:25,874 CRITICAL example Erro crítico
+2025-03-17 12:44:35,770 ERROR example Erro
+2025-03-17 12:44:35,770 CRITICAL example Erro crítico
+2025-03-17 12:44:41,532 ERROR example Erro
+2025-03-17 12:44:41,532 CRITICAL example Erro crítico
+2025-03-17 12:44:43,141 ERROR example Erro
+2025-03-17 12:44:43,141 CRITICAL example Erro crítico
+2025-03-17 12:45:30,905 ERROR example Erro
+2025-03-17 12:45:30,905 CRITICAL example Erro crítico
+2025-03-17 12:45:40,391 ERROR example Erro
+2025-03-17 12:45:40,391 CRITICAL example Erro crítico
+2025-03-17 12:45:51,892 ERROR example Erro
+2025-03-17 12:45:51,892 CRITICAL example Erro crítico
+2025-03-17 12:45:57,093 ERROR example Erro
+2025-03-17 12:45:57,093 CRITICAL example Erro crítico
+2025-03-17 12:46:03,389 ERROR example Erro
+2025-03-17 12:46:03,389 CRITICAL example Erro crítico
+2025-03-17 12:58:08,885 ERROR example Erro
+2025-03-17 12:58:08,885 CRITICAL example Erro crítico
+2025-03-17 12:58:57,275 ERROR example Erro
+2025-03-17 12:58:57,275 CRITICAL example Erro crítico
+2025-03-17 12:59:08,792 ERROR example Erro
+2025-03-17 12:59:08,793 CRITICAL example Erro crítico
+2025-03-17 12:59:20,961 ERROR example Erro
+2025-03-17 12:59:20,961 CRITICAL example Erro crítico
+2025-03-17 12:59:47,033 ERROR example Erro
+2025-03-17 12:59:47,034 CRITICAL example Erro crítico
+2025-03-17 12:59:51,737 ERROR example Erro
+2025-03-17 12:59:51,738 CRITICAL example Erro crítico
+2025-03-17 13:09:04,341 ERROR example Erro
+2025-03-17 13:09:04,341 CRITICAL example Erro crítico
+2025-03-17 13:09:09,603 ERROR example Erro
+2025-03-17 13:09:09,603 CRITICAL example Erro crítico
+2025-03-17 13:09:39,634 ERROR example Erro
+2025-03-17 13:09:39,634 CRITICAL example Erro crítico
+2025-03-17 13:09:42,653 ERROR example Erro
+2025-03-17 13:09:42,654 CRITICAL example Erro crítico
+2025-03-17 13:15:42,913 ERROR example Erro
+2025-03-17 13:15:42,913 CRITICAL example Erro crítico
+2025-03-17 13:46:12,921 ERROR example Erro
+2025-03-17 13:46:12,921 CRITICAL example Erro crítico
+2025-03-17 13:46:51,814 ERROR example Erro
+2025-03-17 13:46:51,814 CRITICAL example Erro crítico
+2025-03-17 13:47:06,598 ERROR example Erro
+2025-03-17 13:47:06,598 CRITICAL example Erro crítico
+2025-03-17 13:47:11,023 ERROR example Erro
+2025-03-17 13:47:11,023 CRITICAL example Erro crítico
+2025-03-17 13:47:40,099 ERROR example Erro
+2025-03-17 13:47:40,099 CRITICAL example Erro crítico
+2025-03-17 13:47:43,447 ERROR example Erro
+2025-03-17 13:47:43,447 CRITICAL example Erro crítico
+2025-03-17 13:47:57,200 ERROR example Erro
+2025-03-17 13:47:57,201 CRITICAL example Erro crítico
+2025-03-17 13:50:30,728 ERROR example Erro
+2025-03-17 13:50:30,728 CRITICAL example Erro crítico
+2025-03-17 13:56:37,384 ERROR example Erro
+2025-03-17 13:56:37,384 CRITICAL example Erro crítico
+2025-03-17 13:56:46,145 ERROR example Erro
+2025-03-17 13:56:46,145 CRITICAL example Erro crítico

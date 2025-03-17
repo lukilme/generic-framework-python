@@ -48,42 +48,9 @@ class QueryBuilder:
         self._params.extend(params)
         return self
 
-    def join(self, table: str, on_condition: str):
-        self._joins.append(sql.SQL("JOIN {} ON {}").format(
-            sql.Identifier(table), sql.SQL(on_condition)
-        ))
-        return self
-
-    def left_join(self, table: str, on_condition: str):
-        self._joins.append(sql.SQL("LEFT JOIN {} ON {}").format(
-            sql.Identifier(table), sql.SQL(on_condition)
-        ))
-        return self
-
-    def group_by(self, *columns):
-        columns_sql = sql.SQL(', ').join(map(sql.Identifier, columns))
-        self._group_by = sql.SQL("GROUP BY {}").format(columns_sql)
-        return self
-
-    def having(self, condition: str, *params):
-        self._having = sql.SQL("HAVING {}").format(sql.SQL(condition))
-        self._params.extend(params)
-        return self
-
-    def order_by(self, column: str, direction: str = 'ASC'):
-        self._query.append(sql.SQL("ORDER BY {} {}").format(
-            sql.Identifier(column),
-            sql.SQL(direction)
-        ))
-        return self
-
     def limit(self, count: int):
         self._query.append(sql.SQL("LIMIT {}").format(sql.Literal(count)))
-        return self
-        
-    def offset(self, offset: int):
-        self._query.append(sql.SQL("OFFSET {}").format(sql.Literal(offset)))
-        return self
+        return self 
 
     def build(self) -> tuple:
 

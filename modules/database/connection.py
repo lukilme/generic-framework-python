@@ -2,6 +2,9 @@ from contextlib import contextmanager
 import psycopg2
 from psycopg2 import OperationalError
 
+class DatabaseError(Exception):
+    pass
+
 class DatabaseConnection:
     _instance = None
 
@@ -12,17 +15,16 @@ class DatabaseConnection:
         return cls._instance
 
     def _initialize_connection(self):
-        """Conexão com fallback e reconexão automática"""
+        ''' Conexão '''
         try:
             self._conn = psycopg2.connect(
-                dbname="seu_db",
-                user="seu_user",
-                password="sua_senha",
+                dbname="teste",
+                user="admin",
+                password="admin",
                 host="localhost",
-                keepalives=1  # Mantém conexão ativa
+                keepalives=1  
             )
         except OperationalError as e:
-            # Implementar lógica de retry
             raise ConnectionError(f"Database connection failed: {e}")
 
     def get_connection(self):
