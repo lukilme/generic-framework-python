@@ -27,7 +27,7 @@ class TestDatabaseConnection(unittest.TestCase):
         db._initialize_connection()
         
         mock_connect.assert_called_once_with(
-            dbname="test",
+            dbname="teste",
             user="admin",
             password="admin",
             host="localhost",
@@ -119,7 +119,7 @@ class TestDatabaseConnection(unittest.TestCase):
 
     @patch.object(DatabaseConnection, 'get_connection')
     def test_get_cursor_exception(self, mock_get_connection):
-        # Configurar mocks
+        
         mock_conn = MagicMock()
         mock_cursor = MagicMock()
         mock_conn.cursor.return_value = mock_cursor
@@ -127,12 +127,10 @@ class TestDatabaseConnection(unittest.TestCase):
         
         db = DatabaseConnection()
         
-        # Simular exceção dentro do contexto
         with self.assertRaises(DatabaseError):
             with db.get_cursor() as cursor:
                 raise ValueError("Erro simulado")
         
-        # Verificar rollback e finalização
         mock_conn.rollback.assert_called_once()
         mock_cursor.close.assert_called_once()
         mock_conn.commit.assert_not_called()
