@@ -265,11 +265,9 @@ class DB:
     def create_tables(cls, models):
         conn = cls.get_connection()
         with conn.cursor() as cursor:
-            # Primeiro cria todas as tabelas principais
             for model in models:
                 cls._create_table_for_model(cursor, model)
             
-            # Depois cria as tabelas many-to-many
             for model in models:
                 if hasattr(model, '_m2m_fields'):
                     for field_name, field in model._m2m_fields.items():
@@ -353,8 +351,7 @@ class ModelMeta(type):
         super().__init__(name, bases, attrs)
         
         if name != 'BaseModel':
-            # Iterar sobre uma cópia fixa das chaves para evitar modificação durante o loop
-            for key in list(cls.__dict__):  # Converta para lista antes de iterar!
+            for key in list(cls.__dict__):  
                 value = getattr(cls, key)
                 if isinstance(value, Relationship):
                     value.contribute_to_class(cls, key)
