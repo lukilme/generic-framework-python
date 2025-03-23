@@ -1,3 +1,3 @@
 *.psql.sql linguist-detectable=true
-*.psql.sql linguist-language=psql
+*.psql.sql linguist-language=PLpgSQL
 *.psql.sql text
