@@ -1,1 +1,1 @@
-docker exec -it postgres-db psql -U admin -d postgres
+docker exec -it postgres-db psql -U admin -d teste
