@@ -2,8 +2,6 @@ from urllib.parse import parse_qs
 import json
 
 class Request:
-    """Representa uma requisição HTTP."""
-    
     def __init__(self, environ):
         self.environ = environ
         self.method = environ.get('REQUEST_METHOD', 'GET')
@@ -13,9 +11,8 @@ class Request:
         self.session = None
         self.user = None
         
-        # Carrega o corpo da requisição se necessário
         self.body = None
-        if self.method in ['POST', 'PUT']:
+        if self.method in ['POST', 'PUT', 'DELETE', 'PATCH']:
             try:
                 content_length = int(environ.get('CONTENT_LENGTH', 0))
                 content_type = environ.get('CONTENT_TYPE', '')
@@ -31,3 +28,26 @@ class Request:
                         self.body = body.decode('utf-8')
             except Exception:
                 self.body = None
+
+    def get_form_value(self, field_name: str, default=None):
+        if self.body is None:
+            return default
+        
+        if isinstance(self.body, dict):
+            if field_name in self.body:
+                return self.body.get(field_name, default)
+        
+        elif isinstance(self.body, dict) and field_name in self.body:
+            values = self.body.get(field_name)
+            if isinstance(values, list) and values:
+                return values[0]
+            return values
+        
+        return default
+
+    def __str__(self):
+        return (
+            f"Request(method={self.method}, path={self.path}, "
+            f"query_params={json.dumps(self.query_params)}, "
+            f"url_params={self.url_params}, body={json.dumps(self.body)})"
+        )

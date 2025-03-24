@@ -2,7 +2,6 @@ from modules.database.validator import Validator,FormatValidator,LengthValidator
 from typing import Dict, List, Type, Optional
 
 class ModelMeta(type):
-    ''' Meta dados da classe geral '''
     def __new__(cls, name, bases, attrs):
         if name != 'BaseModel':
             fields = {}

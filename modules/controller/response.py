@@ -1,6 +1,5 @@
-from typing import Dict, List, Any, Optional
 import json
-
+from typing import Type, List, Optional, Any, Dict, Tuple
 
 class Response:
     """Representa uma resposta HTTP."""
@@ -11,7 +10,7 @@ class Response:
         
         if headers is None:
             headers = []
-            
+
         self.headers = [('Content-Type', content_type)]
         for header in headers:
             self.headers.append(header)
@@ -69,13 +68,10 @@ Response.status_messages = {
     500: "Internal Server Error"
 }
 
-class ResponseFactory:
-    """Fábrica para criar diferentes tipos de respostas."""
-    
+class ResponseFactory:    
     @staticmethod
     def create_response(status_code: int, body: Any = None, 
                         headers: Dict[str, str] = None) -> Response:
-        """Cria uma resposta baseada no código de status e corpo."""
         status = f"{status_code} {Response.status_messages.get(status_code, 'Unknown')}"
         
         if isinstance(body, dict) or isinstance(body, list):
@@ -87,7 +83,6 @@ class ResponseFactory:
     
     @staticmethod
     def create_error_response(status_code: int, message: str) -> Response:
-        """Cria uma resposta de erro."""
         return Response.json({"error": message}, 
                              f"{status_code} {Response.status_messages.get(status_code, 'Error')}")
 
