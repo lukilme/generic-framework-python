@@ -1,27 +1,12 @@
 from modules.utils.logger import Logger
-
-class ModelRegistry:
-    _models = {}
-    
-    @classmethod
-    def register(cls, model):
-        cls._models[model.__name__] = model
-    
-    @classmethod
-    def get_model(cls, name):
-        return cls._models.get(name)
-    
-    @classmethod
-    def get_all_models(cls):
-        return list(cls._models.values())
-
+from modules.database.abstract.model_register import ModelRegistry
 
 class ModelMeta(type):
     def __new__(cls, name, bases, attrs):
         if name != "BaseModel":
             fields = {}
             for key, value in attrs.items():
-                if hasattr(value, 'validate'):  # Verificação por atributo em vez de tipo
+                if hasattr(value, 'validate'):  
                     fields[key] = value
             attrs["_fields"] = fields
 
