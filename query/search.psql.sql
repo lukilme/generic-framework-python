@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION drop_all_tables_public()
+CREATE OR REPLACE FUNCTION drop_t()
 RETURNS void AS $$
 DECLARE
     r RECORD;

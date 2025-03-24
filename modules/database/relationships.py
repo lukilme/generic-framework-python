@@ -15,8 +15,7 @@ class AbstractRelationship(ABC):
         self.attribute_name = name
     
     def get_related_model(self):
-        # Importação tardia para evitar circular import
-        from modules.database.registry import ModelRegistry
+        from modules.database.abstract.model_register import ModelRegistry
         return ModelRegistry.get_model(self.model_class)
 
 class Relationship(AbstractRelationship, Field):
@@ -25,7 +24,7 @@ class Relationship(AbstractRelationship, Field):
         Field.__init__(self, **kwargs)
     
     def get_sql_definition(self):
-        return "INTEGER"  # Para o ID da chave estrangeira
+        return "INTEGER"  
 
 class OneToOneField(Relationship):
     def __init__(self, model_class, back_populates=None, **kwargs):
@@ -53,7 +52,6 @@ class OneToOneField(Relationship):
                 setattr(value, f"_{related_field.attribute_name}_cache", instance)
 
     def get_related_instance(self, instance):
-        # Importação tardia
         from modules.database.db import DB
         
         related_model = self.get_related_model()

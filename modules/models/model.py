@@ -1,5 +1,5 @@
 from modules.database import BaseModel, StringField, DateField, ForeignKey
-from modules.database import BaseModel, StringField, OneToOneField
+from modules.database import OneToOneField
 
 class Usuario(BaseModel):
     nome = StringField(required=True)

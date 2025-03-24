@@ -70,8 +70,8 @@ class BaseModel(metaclass=ModelMeta):
                 """
                 result = DB.execute_query(query, values)
 
-                if result and len(result) > 0:
-                    self.id = result[0]["id"]
+                if result and result > 0:
+                    self.id = result
         else:
             if fields:
                 set_clause = ", ".join([f"{key} = %s" for key in fields.keys()])

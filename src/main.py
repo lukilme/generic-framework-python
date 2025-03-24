@@ -1,7 +1,12 @@
 
 from modules.database import DB
-from modules.models import Usuario, Perfil, Categoria, Produto, Tag
 from datetime import date
+
+from modules.database.abstract.model_register import ModelRegistry
+from modules.database.base_model import BaseModel
+from modules.database.fields import *
+from modules.database.relationships import OneToOneField, ForeignKey
+
 @ModelRegistry.register
 class Usuario(BaseModel):
     nome = StringField(required=True)
