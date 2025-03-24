@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from modules.database.fields import Field
+from modules.database.fields import Field, IntegerField, StringField, FloatField, DateField
 from typing import Type, List, Any, Optional, Dict, Union
 
 
@@ -119,6 +119,7 @@ class ForeignKey(Relationship, Field):
                 pass
 
     def get_related_instance(self, instance):
+        from modules.database.db import DB
         related_model = self.get_related_model()
 
         instance_id = getattr(instance, "id", None)
@@ -178,6 +179,7 @@ class ManyToManyField(Relationship):
         else:
             models = sorted([self.parent_model.__name__, self.model_class])
             through_name = f"{models[0]}_{models[1]}"
+            from modules.database.base_model import BaseModel
 
             for subclass in BaseModel.__subclasses__():
                 if subclass.__name__ == through_name:
@@ -210,6 +212,7 @@ class ManyToManyField(Relationship):
             JOIN {through_model.__tablename__} t ON r.id = t.{related_fk}
             WHERE t.{parent_fk} = %s
         """
+        from modules.database.db import DB
         results = DB.execute_query(query, (instance_id,))
 
         return [related_model(**row) for row in results]
