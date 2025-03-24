@@ -13,19 +13,21 @@ class QueryBuilder:
         return query, params or ()
     
     @staticmethod
-    def build_insert(table, columns):
+    def build_insert(table, columns, returning="id"):
         placeholders = ", ".join(["%s"] * len(columns))
         columns_str = ", ".join(columns)
-        query = f"INSERT INTO {table} ({columns_str}) VALUES ({placeholders}) RETURNING id"
+        query = f"INSERT INTO {table} ({columns_str}) VALUES ({placeholders})"
+        if returning:
+            query += f" RETURNING {returning}"
         return query
     
     @staticmethod
-    def build_update(table, columns, where="id = %s"):
+    def build_update(table, columns, where):
         set_clause = ", ".join([f"{col} = %s" for col in columns])
         query = f"UPDATE {table} SET {set_clause} WHERE {where}"
         return query
     
     @staticmethod
-    def build_delete(table, where="id = %s"):
+    def build_delete(table, where):
         query = f"DELETE FROM {table} WHERE {where}"
         return query

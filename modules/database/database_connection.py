@@ -1,27 +1,14 @@
-import psycopg2
-from psycopg2.extras import RealDictCursor
-from modules.utils.logger import Logger
+from ..utils import logger
+
 
 class DatabaseConnection:
-    _instance = None
-    
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = super(DatabaseConnection, cls).__new__(cls)
-            cls._instance._initialized = False
-        return cls._instance
-    
-    def __init__(self, host="localhost", database="teste", user="admin", password="admin"):
-        if getattr(self, '_initialized', False):
-            return
-        
+    def __init__(self, host, database, user, password):
         self.host = host
         self.database = database
         self.user = user
         self.password = password
         self._connection = None
         self._logger = Logger("DatabaseConnection")
-        self._initialized = True
     
     def connect(self):
         self._logger.info(f"Conectando ao banco de dados {self.database} em {self.host}")
@@ -38,7 +25,7 @@ class DatabaseConnection:
             self.connect()
         return self._connection
     
-    def execute_query(self, query, params=None):
+    def execute(self, query, params=None):
         self._logger.debug(f"Executando query: {query} com parâmetros: {params}")
         conn = self.get_connection()
         with conn.cursor(cursor_factory=RealDictCursor) as cursor:
